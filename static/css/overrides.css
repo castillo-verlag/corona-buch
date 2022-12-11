@@ -1,0 +1,36 @@
+/* Mobile */
+
+@media screen and (max-device-width: 1024px) {
+    div.main-banner {
+        padding-top: 0em !important;
+    }
+
+    #banner.banner-main.py-7 {
+        padding-bottom: 0em !important;
+    }
+
+    #process.feature-home.section {
+        padding-top: 0em !important;
+    }
+}
+
+/* #### Desktops #### */
+@media screen and (min-width: 1024px) {
+    /* some CSS here */
+}
+
+/* Any device */
+
+#book.section {
+    padding-top: 0em !important;
+    padding-bottom: 0em !important;
+}
+
+#review.section-bottom.testimonial {
+    padding-top: 5em !important;
+}
+
+#contact.section.contact.bg-grey {
+    padding-top: 0em !important;
+    padding-bottom: 0em !important;
+}

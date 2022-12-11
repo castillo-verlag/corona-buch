@@ -1,0 +1,144 @@
+<footer class="footer">
+  <div class="container">
+    <div class="row justify-content-between align-items-center">
+      <div class="col-lg-6 col-sm-12 ">
+        <div class="footer-widget">
+          <a class="mb-4 d-inline-block" href="{{ .Site.BaseURL }}">
+            {{ if .Site.Params.logo }}
+            <img src="{{ .Site.Params.logo | absURL }}" alt="{{ .Site.Title }}">
+            {{ else }}
+            <h2 class="mb-0 text-dark">{{ .Site.Title }}</h2>
+            {{ end }}
+          </a>
+          <p class="mb-4">{{ .Site.Params.footer.content | markdownify }}</p>
+        </div>
+      </div>
+
+      <div class="col-lg-6">
+        <div class="subscribe">
+          <h4 class="mb-4">Newsletter</h4>
+          <!-- Begin Mailchimp Signup Form -->
+            <link href="//cdn-images.mailchimp.com/embedcode/slim-10_7_dtp.css" rel="stylesheet" type="text/css">
+            <style type="text/css">
+              #mc_embed_signup{background:#fff; clear:left; font:14px Helvetica,Arial,sans-serif; }
+              /* Add your own Mailchimp form style overrides in your site stylesheet or in this style block.
+                We recommend moving this block and the preceding CSS link to the HEAD of your HTML file. */
+            </style>
+            <div id="mc_embed_signup">
+            <form action="https://google.us2.list-manage.com/subscribe/post?u=f9e8576360a20626e8ddfe0df&amp;id=a81de510ef" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+                <div id="mc_embed_signup_scroll">
+              <label for="mce-EMAIL">Bleib mit unserem Newsletter auf dem Laufenden</label>
+              <input type="email" value="" name="EMAIL" class="email" id="mce-EMAIL" placeholder="Email Addresse" required>
+                <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
+                <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_f9e8576360a20626e8ddfe0df_a81de510ef" tabindex="-1" value=""></div>
+                    <div class="optionalParent">
+                        <div class="clear foot">
+                            <input type="submit" value="Abonnieren" name="subscribe" id="mc-embedded-subscribe" class="button">
+                            <p class="brandingLogo"><a href="http://eepurl.com/hTqguD" title="Mailchimp - email marketing made easy and fun"><img src="https://eep.io/mc-cdn-images/template_images/branding_logo_text_dark_dtp.svg"></a></p>
+                        </div>
+                    </div>
+                </div>
+            </form>
+            </div>
+            <!--End mc_embed_signup-->
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="row footer-btm mt-5 pt-4 border-top">
+      <div class="col-lg-6">
+        <!-- Copyright -->
+        <p class="footer-copy">
+          {{ .Site.Params.copyright | markdownify }}
+        </p>
+        <a href="agb.html">AGBs</a> - <a href="impressum.html">Impressum</a>
+      </div>
+      <div class="col-lg-6">
+        <div class="footer-btm-menu text-lg-right">
+          <img src="{{`images/about/cards-3.png` | relURL }}" alt="" class="img-fluid">
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+{{ "<!-- JS Plugins -->" | safeHTML }}
+{{ range .Site.Params.plugins.js}}
+<script src="{{ .URL | absURL }}"></script>
+{{ end }}
+
+<!-- snipcart -->
+<script type="text/javascript" id="snipcart" src="https://cdn.snipcart.com/scripts/2.0/snipcart.js"
+  data-api-key="M2E5YjA3NjMtYzRiYS00YzVjLWEyYWYtNDY5ZDI0OWZhYjg5"></script>
+<script>
+  Snipcart.execute('registerLocale', 'en', {
+    powered_by: "{{ .Site.Params.Author }}"
+  });
+</script>
+
+{{ "<!-- Main Script -->" | safeHTML }}
+{{ $script := resources.Get "js/script.js" | minify}}
+<script src="{{ $script.Permalink }}"></script>
+{{ "<!-- google analitycs -->" | safeHTML }}
+{{ with .Site.Params.googleAnalitycsID }}
+<script>
+  (function (i, s, o, g, r, a, m) {
+    i['GoogleAnalyticsObject'] = r;
+    i[r] = i[r] || function () {
+      (i[r].q = i[r].q || []).push(arguments)
+    }, i[r].l = 1 * new Date();
+    a = s.createElement(o),
+      m = s.getElementsByTagName(o)[0];
+    a.async = 1;
+    a.src = g;
+    m.parentNode.insertBefore(a, m)
+  })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+  ga('create', '{{ . }}', 'auto');
+  ga('send', 'pageview');
+</script>
+{{ end }}
+
+<!-- cookie -->
+{{ if site.Params.cookies.enable }}
+<script src="https://cdnjs.cloudflare.com/ajax/libs/js-cookie/2.2.1/js.cookie.min.js"></script>
+<div id="js-cookie-box" class="cookie-box cookie-box-hide">
+	Diese Seite benutzt cookies. Bitte erlauben sie die cookies um die Seite zu nutzen. <span id="js-cookie-button" class="btn btn-sm btn-main ml-2">Erlauben</span>
+</div>
+<script>
+	(function ($) {
+		const cookieBox = document.getElementById('js-cookie-box');
+		const cookieButton = document.getElementById('js-cookie-button');
+		if (!Cookies.get('cookie-box')) {
+			cookieBox.classList.remove('cookie-box-hide');
+			cookieButton.onclick = function () {
+				Cookies.set('cookie-box', true, {
+					expires: {{ site.Params.cookies.expire_days }}
+				});
+				cookieBox.classList.add('cookie-box-hide');
+			};
+		}
+	})(jQuery);
+</script>
+
+<!-- cookie style -->
+<style>
+.cookie-box {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  text-align: center;
+  z-index: 9999;
+  padding: 1rem 2rem;
+  background: rgb(71, 71, 71);
+  transition: all .75s cubic-bezier(.19, 1, .22, 1);
+  color: #fdfdfd;
+}
+
+.cookie-box-hide {
+  display: none;
+}
+</style>
+{{ end }}

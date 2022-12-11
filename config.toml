@@ -1,0 +1,131 @@
+baseURL = 'https://www.castillo-verlag.com/'
+languageCode = 'de-DE'
+title = 'Castillo Verlag'
+theme = 'influencer'
+
+############################# Plugins ##############################
+[params.plugins]
+
+  # CSS Plugins
+  [[params.plugins.css]]
+  URL = "plugins/bootstrap/bootstrap.min.css"
+  [[params.plugins.css]]
+  URL = "plugins/slick/slick.css"
+  [[params.plugins.css]]
+  URL = "plugins/themify-icons/themify-icons.css"
+  [[params.plugins.css]]
+  URL = "plugins/magnific-popup/magnific-popup.css"
+  [[params.plugins.css]]
+  URL = "plugins/magnific-popup/magnific-popup.css"
+  
+  # JS Plugins
+  [[params.plugins.js]]
+  URL = "plugins/jQuery/jquery.min.js"
+  [[params.plugins.js]]
+  URL = "plugins/bootstrap/bootstrap.min.js"
+  [[params.plugins.js]]
+  URL = "plugins/slick/slick.min.js"
+  [[params.plugins.js]]
+  URL = "plugins/magnific-popup/magnific-popup.min.js"
+
+  
+############################## navigation ###############################
+[menu]
+
+# 4. Authors (menu: über uns)
+# 5. Reviews (menu: Stimmen??)
+# 6. Kontakt
+    
+  [[menu.main]]
+  name = "Wimmelbuch"
+  URL = "book"
+  weight = 1
+  
+  # [[menu.main]]
+  # name = "Chapter"
+  # URL = "chapter"
+  # weight = 2
+
+  [[menu.main]]
+  name = "Entstehung"
+  URL = "process"
+  weight = 2
+  
+  [[menu.main]]
+  name = "Team"
+  URL = "author"
+  weight = 3
+
+  [[menu.main]]
+  name = "Stimmen"
+  URL = "review"
+  weight = 4
+  
+  # [[menu.main]]
+  # name = "Blog"
+  # URL = "blog"
+  # weight = 5
+  
+  [[menu.main]]
+  name = "Kontakt"
+  URL = "contact"
+  weight = 5
+
+
+#################### default parameters ################################
+[params]
+logo = ""
+home = "Home"
+# Meta data
+description = "This is meta description"
+author = "Borja Clemente"
+# Google Analitycs
+googleAnalitycsID = "" # Your ID
+# copyright
+copyright = "Copyright &copy; 2022 Castillo Verlag All Rights Reserved"
+
+# Preloader
+[params.preloader]
+enable = true
+preloader = "" # use .png , .svg or .gif format
+
+# Navigation get start button
+[params.navButton]
+enable = true
+preorderURL = "https://forms.gle/TY1nXYJdMgwedfiQ6"
+
+# cookies
+[params.cookies]
+enable = true
+expire_days = 30
+  
+############################# Footer ########################
+[params.footer]
+content = "I am a small footer"
+
+
+############################# post ###################
+[[params.share]]
+title = "facebook"
+icon = "ti-facebook" # themify icon : https://themify.me/themify-icons
+link = "#"
+
+[[params.share]]
+title = "instagram"
+icon = "ti-instagram" # themify icon : https://themify.me/themify-icons
+link = "https://www.instagram.com/castillo_verlag/"
+
+[[params.share]]
+title = "twitter"
+icon = "ti-twitter-alt" # themify icon : https://themify.me/themify-icons
+link = "#"
+
+[[params.share]]
+title = "linkedin"
+icon = "ti-linkedin" # themify icon : https://themify.me/themify-icons
+link = "#"
+
+[[params.share]]
+title = "github"
+icon = "ti-github" # themify icon : https://themify.me/themify-icons
+link = "#"
