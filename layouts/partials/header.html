@@ -37,8 +37,9 @@
 
         {{ if .Site.Params.navButton.enable }}
         {{ "<!-- nav btn -->" | safeHTML }}
-          <button class="snipcart-add-item btn btn-border-tp btn-small ml-0 ml-lg-3 mb-3 mb-lg-0" onclick=" window.open('{{ .Site.Params.navButton.preorderURL }}','_blank')">
-          Vorbestellen
+        <button class="snipcart-add-item btn btn-border-tp btn-small ml-0 ml-lg-3 mb-3 mb-lg-0"
+          onclick=" window.open('{{ .Site.Params.navButton.preorderURL }}','_blank')">
+          Hol dir dein Buch
         </button>
         {{ end }}
       </div>

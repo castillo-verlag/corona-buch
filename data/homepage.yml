@@ -1,13 +1,14 @@
 ########################## Banner #############################
 banner:
   enable: true
-  writter: "Dokumentation des Zeitgeschehens"
+  writter: "Wie habt ihr die Corona-Pandemie erlebt?"
   title: "Corona Wimmelbuch"
   image: "images/home/Banner Square.png"
-  content: "Reflektiere zusammen mit deinen Kindern über die aktuelle Coronazeit. Finde dich in unserem Buch wieder und erzähle deine persönlichen Geschichten aus dieser besonderen Zeit."
-  button: Feedback geben
+  content: "Es kam überaschend als wir plötzlich alle zu Hause bleiben mussten. Kindergärten, Schulen, Schwimmbäder, Theater  und die meisten Geschäfte waren über Monate geschlossen. An Reisen oder Familienfeiern war nicht zu denken. Eine Zeit in der wir uns viel haben einfallen lassen, um diesen neuen, herausfordernden Alltag zu meistern. Ein Buch um sich gemeinsam zu erinnern."
   url: https://docs.google.com/forms/d/e/1FAIpQLSeFNAstuP_xxBQH2r73tyompQg4_qww__CUoQvBhDTO0bkvFA/viewform?vc=0&c=0&w=1&flr=0&usp=mail_form_link
-  preorder: Vorbestellen
+  button:
+    enable: false
+  preorder: Hol dir dein Buch
   preorderURL: https://forms.gle/TY1nXYJdMgwedfiQ6
   # price : "14.99"
 # ######################## Book Preview ##########################
@@ -19,7 +20,7 @@ preview:
     - image: "images/preview/RZ_MFH_COL_Final_21092021-watermark.jpg"
 
   title: "Blick ins Buch"
-  content: "Schau dir hier an, wie unterschiedliche Familien in einem Mehrfamilienhaus in der Innenstadt die Coronazeit erleben."
+  content: "Schau dir hier an, wie unterschiedliche Familien in einem Mehrfamilienhaus in der Innenstadt die Coronazeit erlebt haben."
 
   inside:
     # book inside item loop
@@ -30,7 +31,7 @@ preview:
 
   # button
   button:
-    enable: true
+    enable: false
     label: "Wie findest du es?"
     link: "https://docs.google.com/forms/d/e/1FAIpQLSeFNAstuP_xxBQH2r73tyompQg4_qww__CUoQvBhDTO0bkvFA/viewform?vc=0&c=0&w=1&flr=0&usp=mail_form_link"
     # FIXME open in new tab
@@ -93,12 +94,11 @@ preview:
 # #################################### Process ################################
 process:
   enable: true
-  title: "Wie unser Buch entsteht"
+  title: "Wie unser Buch entstanden ist"
   content:
-    "Wir haben das Konzept anhand von vielen Gesprächen mit Familien und Beobachtungen während der Coronazeit entwickelt. Die ersten groben Skizzen hat Borja von Hand gezeichnet, bevor wir Eva Hoppe mit der Illustration beauftragt haben. Mit ihr haben wir sehr iterativ gearbeitet; immer wieder wurde der aktuelle Stand mit Kindern und Eltern validiert und ihr Feedback eingearbeitet. 
+    "Wir haben das Konzept anhand von vielen Gesprächen mit Familien und Beobachtungen während der Coronazeit entwickelt. Die ersten groben Skizzen hat Borja von Hand gezeichnet, bevor Eva Hoppe sich an die Illustration gemacht hat. Mit ihr haben wir sehr iterativ gearbeitet; immer wieder wurde der aktuelle Stand mit Kindern und Eltern validiert und ihr Feedback eingearbeitet. 
     So wurden Eva`s Hand gezeichnete Skizzen immer detaillierter bis sie diese digitalisiert hat. \n
-Das Buch wurde von zwei Kinderpsychologen geprüft und für sehr wertvoll empfunden. Nun ist das Buch fast fertig und wir möchten es als hochwertiges Pappebuch in Deutschland drucken.
-Sichert euch eines der ersten Exemplare!"
+Das Buch wurde von zwei Kinderpsychologen angeschaut und für sehr wertvoll empfunden."
   image: "images/about/ipad.jpg"
   #TODO add links to Eva Homepage + Link zum Vorbestellen
   # feature:
@@ -122,7 +122,7 @@ Sichert euch eines der ersten Exemplare!"
   # button
   button:
     enable: true
-    label: "Vorbestellen"
+    label: "Hol dir dein Buch"
     link: "https://forms.gle/TY1nXYJdMgwedfiQ6"
     # FIXME open in new tab
 # ######################################## author #############################
@@ -133,7 +133,7 @@ author:
   designation : "Das Team"
   content : "Wir sind ein Paar aus München, beide Informatiker und Eltern von zwei Mädels. Dies ist das erste Kinderbuch, das wir gemeinsam entwickeln und veröffentlichen. 
 Es ist uns wichtig, die aktuelle Coronazeit möglichst wahrheitsgetreu, perspektiven- und detailreich darzustellen. Wir wollen nichts beschönigen und das Augenmerk auf Lösungen und Ideen richten und trotz der anstrengenden Zeiten einen Funken Humor versprühen. \n
-Wie sich zeigte, wollen unsere Leser - die Kinder - starke Konturen, kräftige Farben und Comic-Style. So machten wir uns auf die Suche nach einer passenden Illustratorin und fanden die erfahrene Comic-Zeichnerin und Illustratorin Eva Hoppe. Eva arbeitet nicht nur handwerklich sehr professionell, sondern bringt tolle Ideen ein und hat das Geschick Charaktere so darzustellen, dass der aufmerksame Leser sagt: “Das ist doch…”. Wir sind gespannt, wie euch das Buch gefällt. Werft einen ersten Blick hinein und bestellt am besten direkt euer Exemplar. "
+Wie sich zeigte, wollen unsere Leser - die Kinder - starke Konturen, kräftige Farben und Comic-Style. So machten wir uns auf die Suche nach einer passenden Illustratorin und fanden die erfahrene Comic-Zeichnerin und Illustratorin Eva Hoppe. Eva arbeitet nicht nur handwerklich sehr professionell, sondern bringt tolle Ideen ein und hat das Geschick Charaktere so darzustellen, dass der aufmerksame Leser sagt: “Das ist doch…”. Wir sind gespannt, wie euch das Buch gefällt. "
  #TODO add links to Eva Homepage + Link zum Vorbestellen
   # signature
   signature : "images/about/2.png"
@@ -210,7 +210,7 @@ reviews:
 contact:
   enable : true
   title : "Kontakt"
-  subtitle : "Hast du Fragen, Anmerkungen oder möchtest das Buch vorbestellen, zögere nicht uns zu kontaktieren!"
+  subtitle : "Hast du Fragen, Anmerkungen oder Interesse an dem Buch? Zögere nicht uns zu kontaktieren!"
   contactItem:
     # contact Item loop
     # - title : "Contact Quickly"
@@ -222,7 +222,7 @@ contact:
     - title : "Email"
       icon : "ti-email" # themify icon pack : https://themify.me/themify-icons
       list:
-        - listItem : "startor@support.com"
+        - listItem : "corona.buch@gmail.com"
 
     # contact Item loop
     # - title : "Location"

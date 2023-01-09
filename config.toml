@@ -82,7 +82,7 @@ author = "Borja Clemente"
 # Google Analitycs
 googleAnalitycsID = "" # Your ID
 # copyright
-copyright = "Copyright &copy; 2022 Castillo Verlag All Rights Reserved"
+copyright = "Copyright &copy; 2023 Castillo Verlag All Rights Reserved"
 
 # Preloader
 [params.preloader]
@@ -101,7 +101,7 @@ expire_days = 30
   
 ############################# Footer ########################
 [params.footer]
-content = "I am a small footer"
+content = ""
 
 
 ############################# post ###################

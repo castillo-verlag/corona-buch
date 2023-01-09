@@ -12,11 +12,22 @@
     #process.feature-home.section {
         padding-top: 0em !important;
     }
+    .desktop-only {
+        display: none !important;
+    }
+    .mobile-only {
+        padding-bottom: 4em !important;
+    }
+
 }
 
 /* #### Desktops #### */
 @media screen and (min-width: 1024px) {
     /* some CSS here */
+    .mobile-only {
+        display: none !important;
+        padding-bottom: 25em !important;
+    }
 }
 
 /* Any device */
@@ -33,4 +44,8 @@
 #contact.section.contact.bg-grey {
     padding-top: 0em !important;
     padding-bottom: 0em !important;
+}
+
+.footer.footer {
+    padding-top: 0em !important;
 }

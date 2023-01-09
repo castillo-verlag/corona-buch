@@ -8,6 +8,13 @@
       <div class="col-lg-7 col-md-8">
         <div class="main-banner">
           {{ with .Site.Data.homepage.banner }}
+          {{ if .image }}
+          <div class="col-lg-4 mobile-only d-lg-block">
+            <div class="banner-img pt-5">
+              <img src="{{ .image | relURL }}" alt="{{ .title | markdownify }}" class="img-fluid w-100">
+            </div>
+          </div>
+          {{ end }}
           <span class="text-color font-weight-bold">{{ .writter | markdownify }}</span>
           <h1 class="mb-3 mt-2">{{ .title | markdownify }}</h1>
 
@@ -19,11 +26,6 @@
           <p class="mb-4">{{ .content | markdownify }}</p>
           <button class="snipcart-add-item btn btn-main mt-2" data-item-id="1"
             data-item-name="{{ .title | markdownify }}" data-item-image="{{ .image | absURL }}"
-            data-item-price="{{ .price }}" onclick=" window.open('{{ .url }}','_blank')">
-            {{ .button }} <i class="ti-angle-right ml-3"></i>
-          </button>
-          <button class="snipcart-add-item btn btn-main mt-2" data-item-id="1"
-            data-item-name="{{ .title | markdownify }}" data-item-image="{{ .image | absURL }}"
             data-item-price="{{ .price }}" onclick=" window.open('{{ .preorderURL }}','_blank')">
             {{ .preorder }} <i class="ti-angle-right ml-3"></i>
           </button>
@@ -31,7 +33,7 @@
       </div>
 
       {{ if .image }}
-      <div class="col-lg-5 d-none d-lg-block">
+      <div class="col-lg-4 desktop-only d-lg-block">
         <div class="banner-img pt-5">
           <img src="{{ .image | relURL }}" alt="{{ .title | markdownify }}" class="img-fluid w-100">
         </div>
@@ -51,7 +53,8 @@
     <div class="row">
       <div class="col-lg-5">
         <div class="book-preview">
-          <img src="{{`images/gallery/background-square.jpg` | relURL}}" class="background-device img-fluid" alt="device">
+          <img src="{{`images/gallery/background-square.jpg` | relURL}}" class="background-device img-fluid"
+            alt="device">
           <div class="book-pages">
             {{ range .pagePreview }}
             <div class="item">
@@ -193,22 +196,22 @@
 
       <div class="col-lg-5 col-md-5">
         <div class="mt-5 mt-lg-0">
-          
-            <div class="book-preview">
-              <img src="{{`images/gallery/background.jpg` | relURL}}" class="background-device img-fluid" alt="device">
-              <div class="book-pages">
-                {{ range .pagePreview }}
-                <div class="item">
-                  <img src="{{ .image | relURL }}" alt="page-preview" class="img-fluid">
-                  <div class="overlay">
-                    <a href="{{ .image | relURL }}" class="popup-gallery img-fluid" data-title="Preview"><i
-                        class="ti-fullscreen"></i></a>
-                  </div>
+
+          <div class="book-preview">
+            <img src="{{`images/gallery/background.jpg` | relURL}}" class="background-device img-fluid" alt="device">
+            <div class="book-pages">
+              {{ range .pagePreview }}
+              <div class="item">
+                <img src="{{ .image | relURL }}" alt="page-preview" class="img-fluid">
+                <div class="overlay">
+                  <a href="{{ .image | relURL }}" class="popup-gallery img-fluid" data-title="Preview"><i
+                      class="ti-fullscreen"></i></a>
                 </div>
-                {{ end }}
               </div>
+              {{ end }}
             </div>
-          
+          </div>
+
         </div>
       </div>
     </div>
