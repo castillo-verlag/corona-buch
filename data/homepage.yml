@@ -9,7 +9,7 @@ banner:
   button:
     enable: false
   preorder: Hol dir dein Buch
-  preorderURL: https://forms.gle/TY1nXYJdMgwedfiQ6
+  preorderURL: https://forms.gle/ameDh4potREaMWPA9
   # price : "14.99"
 # ######################## Book Preview ##########################
 preview:
@@ -123,7 +123,7 @@ Das Buch wurde von zwei Kinderpsychologen angeschaut und für sehr wertvoll empf
   button:
     enable: true
     label: "Hol dir dein Buch"
-    link: "https://forms.gle/TY1nXYJdMgwedfiQ6"
+    link: "https://forms.gle/ameDh4potREaMWPA9"
     # FIXME open in new tab
 # ######################################## author #############################
 author:
